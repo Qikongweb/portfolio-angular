@@ -15,9 +15,13 @@ import {StyleUtils,StylesheetMap,MediaMarshaller,ɵMatchMedia,BreakPointRegistry
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import { AboutComponent } from './about/about.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
-import { ExperienceComponent } from './experience/experience.component';
 import { EducationComponent } from './education/education.component';
 import { ContactComponent } from './contact/contact.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
+import {MatTableModule} from '@angular/material/table';
+import { UsersService } from './services/users.service';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 
 @NgModule({
@@ -28,7 +32,6 @@ import { ContactComponent } from './contact/contact.component';
     SidenavListComponent,
     AboutComponent,
     PortfolioComponent,
-    ExperienceComponent,
     EducationComponent,
     ContactComponent,
   ],
@@ -43,13 +46,17 @@ import { ContactComponent } from './contact/contact.component';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatGridListModule,
+    MatCardModule,
+    MatTableModule,
+    MatProgressBarModule,
     
   ],
   exports: [
     FlexLayoutModule
     ],
-  providers: [StyleUtils,StylesheetMap,MediaMarshaller,ɵMatchMedia,BreakPointRegistry,PrintHook,LayoutStyleBuilder,FlexStyleBuilder,ShowHideStyleBuilder,FlexOrderStyleBuilder],
+  providers: [StyleUtils,StylesheetMap,MediaMarshaller,ɵMatchMedia,BreakPointRegistry,PrintHook,LayoutStyleBuilder,FlexStyleBuilder,ShowHideStyleBuilder,FlexOrderStyleBuilder,UsersService],
   bootstrap: [AppComponent]
 })
 

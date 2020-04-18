@@ -1,0 +1,26 @@
+.skill {
+    margin-top:100px;
+    margin-top: 100px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+   
+    
+}
+
+h2 {
+    margin:40px auto;
+}
+.front-end {
+    background-color: #ffffff;
+    -moz-box-shadow:    1px 1px 9px 1px #ccc;
+    -webkit-box-shadow: 1px 1px 9px 1px #ccc;
+    box-shadow:         1px 1px 9px 1px #ccc;
+    padding:30px;
+}
+.colorChange {
+    background-color: green !important;
+}
+.mat-progress-bar {
+    background-color: #000000 !important;
+}

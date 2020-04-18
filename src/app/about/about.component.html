@@ -1,1 +1,40 @@
-<p>about works!</p>
+
+<!-- <mat-grid-list class="about" cols="3" rowHeight="1:1"> -->
+<div class="container about"
+     fxLayout
+     fxLayout.xs="column"
+     fxLayoutAlign="center"
+     fxLayoutGap="20px"
+     fxLayoutGap.xs="0">
+  <div class="item item-4 imgPosition" fxFlex="40%"  >
+    <img src="http://www.qikong.tk/img/photo.png" alt="Photo of a Shiba Inu">
+    <button mat-button>Linkedin</button>
+    <button mat-button>Facebook</button>
+  </div>
+  <div class="item item-5" fxFlex="60%">
+      <h1>Qi Kong (Claire)</h1>
+      <p class="ContentFont">Front End Developer</p>
+      <button mat-raised-button color="primary">Download CV</button>
+      <button mat-raised-button color="accent">Contact</button>
+
+      <table mat-table [dataSource]="dataSource" >
+
+        <ng-container matColumnDef="name">
+          <td mat-cell *matHeaderCellDef>  </td>
+          <td mat-cell *matCellDef="let element" class="name "> {{element.name}} </td>
+        </ng-container>
+      
+        <!-- Weight Column -->
+        <ng-container matColumnDef="content">
+          <td mat-cell *matHeaderCellDef>  </td>
+          <td mat-cell *matCellDef="let element" ><p class="ContentFont">{{element.content}}</p>  </td>
+        </ng-container>      
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+  </div>
+</div>
+  
+
