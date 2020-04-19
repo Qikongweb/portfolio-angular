@@ -17,8 +17,8 @@ export class UsersService {
 
   constructor() { }
 
-  getUsers() {
-    return users;
+  sendMessage() {
+    console.log("email");
   }
   
 }

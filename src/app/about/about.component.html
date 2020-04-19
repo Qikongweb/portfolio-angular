@@ -8,14 +8,18 @@
      fxLayoutGap.xs="0">
   <div class="item item-4 imgPosition" fxFlex="40%"  >
     <img src="http://www.qikong.tk/img/photo.png" alt="Photo of a Shiba Inu">
-    <button mat-button>Linkedin</button>
-    <button mat-button>Facebook</button>
+    <!-- <button mat-button>link</button> -->
+    <!-- <br>
+    <mat-icon>link</mat-icon>
+    <mat-icon>mood</mat-icon>
+     -->
+    <!-- <button mat-button>Facebook</button> -->
   </div>
   <div class="item item-5" fxFlex="60%">
-      <h1>Qi Kong (Claire)</h1>
-      <p class="ContentFont">Front End Developer</p>
-      <button mat-raised-button color="primary">Download CV</button>
-      <button mat-raised-button color="accent">Contact</button>
+      <h1 class="titleBack">Qi Kong (Claire)</h1>
+      <p class="ContentFont titleBack">Front End Developer</p>
+      <button class="titleBack" mat-raised-button color="primary" (click)="downloadPdf()">Download CV</button>
+      <button mat-raised-button color="accent" routerLink="/contact">Contact</button>
 
       <table mat-table [dataSource]="dataSource" >
 

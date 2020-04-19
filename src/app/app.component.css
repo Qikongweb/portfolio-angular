@@ -10,3 +10,7 @@ main {
     padding: 10px;
     background-color: #eeeeee;
 }
+.container {
+    text-align: center;
+    margin:40px auto;
+}

@@ -10,7 +10,28 @@
             <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
             
             <main>
-                <router-outlet></router-outlet>
+                
+                <div *ngIf="router.url === '/'">
+                    <app-about></app-about>
+                    <app-skills></app-skills>
+                    <app-portfolio></app-portfolio>
+                    <app-education></app-education>
+                    <app-contact></app-contact>
+
+                </div>
+                <div *ngIf="router.url !== '/'">
+                    <router-outlet></router-outlet>
+                </div>
+                
+                <footer class="page-footer" id="footerStyle">
+                    <div class="footer-copyright">
+                        <div class="container">
+                            <h3>Thank you for your visting!</h3>
+                            <p>© 2020  QiKong</p>
+            
+                        </div>
+                    </div>
+                </footer>
             </main>
         </mat-sidenav-content>
     </mat-sidenav-container>

@@ -1,0 +1,37 @@
+.contact {
+    margin-top:100px;
+    margin-top: 100px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+mat-form-field {
+    width: 100%;
+    margin-bottom: 30px;
+}
+h1 {
+    font-size: 40px;
+}
+button {
+    padding: 20px auto;
+}
+.front-end {
+    background-color: #ffffff;
+    -moz-box-shadow:    1px 1px 9px 1px #ccc;
+    -webkit-box-shadow: 1px 1px 9px 1px #ccc;
+    box-shadow:         1px 1px 9px 1px #ccc;
+    padding:30px;
+}
+agm-map {
+    height: 425px;
+}
+.mapArea {
+    background-color: #ffffff;
+    -moz-box-shadow:    1px 1px 9px 1px #ccc;
+    -webkit-box-shadow: 1px 1px 9px 1px #ccc;
+    box-shadow:         1px 1px 9px 1px #ccc;
+}
+mat-toolbar {
+    /* background-color: #d0f0d9; */
+    margin-bottom: 20px;
+}

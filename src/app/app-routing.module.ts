@@ -13,6 +13,10 @@ const routes: Routes = [{
     component: AboutComponent
   },
   {
+    path: 'about',
+    component: AboutComponent
+  },
+  {
     path: 'skills',
     component: SkillsComponent
   },

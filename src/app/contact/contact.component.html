@@ -1,1 +1,69 @@
-<p>contact works!</p>
+<div class="contact">
+    <h1>Contact</h1>
+    <div class="row"  *ngIf="showMsg">
+        <mat-toolbar [ngStyle]="{'background-color': statusColor}">{{submitResult}}</mat-toolbar>
+
+    </div>
+    <div class="container " fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="5%" fxLayoutGap.xs="0">
+
+        
+        <div class="item item-4 imgPosition" fxFlex="60%">
+
+            <mat-card class="card front-end">
+                <mat-card-content>
+                    <h3>Hey There, happy to hear from you.</h3>
+                    <!-- <form class="example-form" (ngSubmit) = "onClickSubmit()"> -->
+                        
+                    <mat-form-field class="example-full-width">
+                        <input type="text" 
+                                placeholder="Name*" 
+                                aria-label="name" 
+                                matInput 
+                                [(ngModel)]="inputData.name">
+
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field class="example-full-width">
+
+                        <input type="text" 
+                                placeholder="Email*" 
+                                aria-label="email" 
+                                matInput
+                                [(ngModel)]="inputData.email"
+                                >
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field class="example-full-width">
+
+                        <textarea type="text" 
+                                placeholder="Message*" 
+                                aria-label="message" 
+                                matInput
+                                [(ngModel)]="inputData.message">
+                            </textarea>
+                    </mat-form-field>
+                    <mat-card-actions>
+                        <button mat-raised-button color="primary" (click)="postMessages()">SUBMIT</button>
+                    </mat-card-actions>
+                    <!-- </form> -->
+                </mat-card-content>
+            </mat-card>
+
+        </div>
+        <div class="item item-5" fxFlex="40%">
+
+            <div class="mapArea">
+                <!-- app.component.html -->
+                <agm-map 
+                [latitude]="latitude" 
+                [longitude]="longitude" 
+                [zoom]="zoom" >
+                <agm-marker 
+                [latitude]="latitude" 
+                [longitude]="longitude"></agm-marker>
+                </agm-map>
+
+            </div>
+        </div>
+    </div>
+</div>
