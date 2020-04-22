@@ -16,8 +16,9 @@
                         
                     <mat-form-field class="example-full-width">
                         <input type="text" 
-                                placeholder="Name*" 
+                                placeholder="Name" 
                                 aria-label="name" 
+                                required
                                 matInput 
                                 [(ngModel)]="inputData.name">
 
@@ -26,8 +27,9 @@
                     <mat-form-field class="example-full-width">
 
                         <input type="text" 
-                                placeholder="Email*" 
+                                placeholder="Email" 
                                 aria-label="email" 
+                                required
                                 matInput
                                 [(ngModel)]="inputData.email"
                                 >
@@ -36,9 +38,10 @@
                     <mat-form-field class="example-full-width">
 
                         <textarea type="text" 
-                                placeholder="Message*" 
+                                placeholder="Message" 
                                 aria-label="message" 
                                 matInput
+                                required
                                 [(ngModel)]="inputData.message">
                             </textarea>
                     </mat-form-field>

@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {UsersService} from '../services/users.service';
 import "../../assets/js/smtp.js";
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -50,25 +48,45 @@ export class ContactComponent implements OnInit {
   // send method to service
   postMessages(){
     // console.log(message)
-    this.http.post('https://formspree.io/xeqlbrrk', this.inputData).subscribe({
-    next: data => {
-      this.inputData = {
-        name: '',
-        email: '',
-        message: ''
-      }
-      console.log("success")
-      this.showMsg= true;
-      this.submitResult = 'Thank you for you information';
-      this.statusColor = "#dff0d9";
-    },
-    error: error => {
-      console.error('There was an error!', error)
-      this.submitResult = error.error.error;
+    if(this.inputData.name === ''){
       this.showMsg = true;
       this.statusColor = "#f2dedf";
+      this.submitResult = "Please fill your name."
     }
-  })
+    else if (this.inputData.email === ''){
+      this.showMsg = true;
+      this.statusColor = "#f2dedf";
+      this.submitResult = "Please fill your email."
+    }
+    else
+    {
+      this.http.post('https://formspree.io/xeqlbrrk', this.inputData).subscribe({
+      next: data => {
+        this.inputData = {
+          name: '',
+          email: '',
+          message: ''
+        }
+        console.log("success")
+        this.showMsg= true;
+        this.submitResult = 'Thank you for you information';
+        this.statusColor = "#dff0d9";
+      },
+      error: error => {
+        console.error('There was an error!', error)
+        if(error.error.error.includes('email')){
+          this.submitResult = "Your email is not correct.";
+          this.showMsg = true;
+          this.statusColor = "#f2dedf";
+        }else{
+          this.submitResult = error.error.error;
+          this.showMsg = true;
+          this.statusColor = "#f2dedf";
+
+        }
+      }
+    })
+  }
     
 }
   
