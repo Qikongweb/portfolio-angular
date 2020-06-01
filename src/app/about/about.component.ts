@@ -7,7 +7,7 @@ export interface PeriodicElement {
 }
 // personal information
 const ELEMENT_DATA: PeriodicElement[] = [
-  { name: 'Address: ',  content: "207-4275 Grange St."},
+  { name: 'Address: ',  content: "4275 Grange St."},
   { name: 'Email: ' ,  content: "kongqi2011@gmail.com"},
   { name: 'Phone Number: ', content: "902-414-1875"},
   { name: 'Linkedin: ', content: "www.linkedin.com/in/claire-qi-kong-454645174"}
@@ -36,7 +36,7 @@ export class AboutComponent implements OnInit {
 
   //download method
   downloadPdf() {
-    const pdfUrl = '../../assets/file/QK_resume.pdf';
+    const pdfUrl = '../../assets/file/QiKong_resume.pdf';
     const pdfName = 'QK_resume';
     FileSaver.saveAs(pdfUrl, pdfName);
   }
