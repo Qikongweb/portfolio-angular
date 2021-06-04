@@ -7,9 +7,9 @@ export interface PeriodicElement {
 }
 // personal information
 const ELEMENT_DATA: PeriodicElement[] = [
-  { name: 'Address: ',  content: "4275 Grange St."},
+  { name: 'Address: ',  content: "5674 Jersey Ave."},
   { name: 'Email: ' ,  content: "kongqi2011@gmail.com"},
-  { name: 'Phone Number: ', content: "902-414-1875"},
+  { name: 'Phone Number: ', content: "604-445-8398"},
   { name: 'Linkedin: ', content: "www.linkedin.com/in/claire-qi-kong-454645174"}
 
 ];

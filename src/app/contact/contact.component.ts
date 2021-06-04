@@ -16,7 +16,9 @@ export class ContactComponent implements OnInit {
   title: string = 'AGM project';
   latitude: number;
   longitude: number;
-  zoom:number;
+  zoom: number;
+  address: string;
+  private geoCoder;
 
   ngOnInit() {
     this.setCurrentLocation();
@@ -34,6 +36,8 @@ export class ContactComponent implements OnInit {
       });
     }
   }
+
+  
 
   // Save contact page data
   inputData = {
